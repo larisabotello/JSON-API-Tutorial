@@ -31,15 +31,30 @@ internal func exerciseOne() {
     // then the first dictionary value of that array, then the dictionary stored in "name",
     // then the value stored in "first". We  then told it that we wanted the value as a string.
     
-    /*
+   
      
-     Now it's your turn to get the rest of the values needed to print the following:
-     
-     "<first name> <last name> lives at <street name> in <city>, <state>, <post code>.
+     // Now it's your turn to get the rest of the values needed to print the following:
+     // last name
+     let lastName = userData["results"][0]["name"]["last"].stringValue
+     // street name
+    let streetName = userData["results"][0]["location"]["street"].stringValue
+     // city
+    let cityName = userData["results"][0]["location"]["city"].stringValue
+     // state
+    let stateName = userData["results"][0]["location"]["state"].stringValue
+     // post code
+    let postalCode = userData["results"][0]["location"]["postcode"].intValue
+     // title
+     let title = userData["results"][0]["name"]["title"].stringValue
+     // email address
+    let email = userData["results"][0]["email"].stringValue
+     // cell #
+    let cell = userData["results"][0]["cell"].stringValue
+      /*"<first name> <last name> lives at <street name> in <city>, <state>, <post code>.
      If you want to contact <title>. <last name>, you can email <email address> or
      call at <cell phone number>."
-     
      */
+    print(" \(firstName) \(lastName) lives at \(streetName) in \(cityName), \(stateName), \(postalCode) If you want to contact \(title). \(lastName), you can email \(email) or call at \(cell).")
     
     
     
@@ -68,7 +83,7 @@ internal func exerciseTwo() {
     
     // Uncomment this print statement when you are ready to check your code!
     
-//    print("The top movie is \(topMovie.name) by \(topMovie.rightsOwner). It costs $\(topMovie.price) and was released on \(topMovie.releaseDate). You can view it on iTunes here: \(topMovie.link)")
+    print("The top movie is \(topMovie.name) by \(topMovie.rightsOwner). It costs $\(topMovie.price) and was released on \(topMovie.releaseDate). You can view it on iTunes here: \(topMovie.link)")
 }
 
 internal func exerciseThree() {
